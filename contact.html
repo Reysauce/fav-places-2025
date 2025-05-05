@@ -59,6 +59,77 @@
     </header>
     <main>
       <div class="parallax3"><div>Have a Question?</div></div>
+      <form
+        name="contact"
+        method="POST"
+        data-netlify="true"
+        netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="contact" />
+
+        <!-- Hidden bot field -->
+        <p hidden>
+          <label>Don’t fill this out: <input name="bot-field" /></label>
+        </p>
+
+        <p>
+          <label>Name: <input type="text" name="name" required /></label>
+        </p>
+
+        <p>
+          <label>Email: <input type="email" name="email" required /></label>
+        </p>
+
+        <p>
+          <label>Subject: <input type="text" name="subject" required /></label>
+        </p>
+
+        <p>
+          <label>Message: <textarea name="message" required></textarea></label>
+        </p>
+
+        <p>
+          <button type="submit">Send</button>
+        </p>
+      </form>
+
+      <!-- <form
+        name="Contact Form"
+        method="post"
+        data-netlify="true"
+        onsubmit="Submit">
+        <div class="form-row">
+          <div class="form-group col-md-6 mt-3">
+            <label for="name">Your Name</label>
+            <input
+              type="text"
+              class="form-floating"
+              id="name"
+              name="Name"
+              class="form-control" />
+          </div>
+          <div class="form-group col-md-6 mt-3">
+            <label for="inputEmail">Your Email</label>
+            <input type="email" class="form-control" id="inputEmail" />
+          </div>
+          <div class="form-group col-md-6 mt-3">
+            <label for="inputSubject">Subject line</label>
+            <input
+              type="text"
+              class="form-floating"
+              id="inputSubject"
+              class="form-control" />
+          </div>
+          <div class="form-group col-md-6 mt-3">
+            <label for="inputMessage">Message</label>
+            <input
+              type="text"
+              class="form-floating"
+              id="inputMessage"
+              class="form-control" />
+          </div>
+        </div>
+      </form> -->
+      <form name="Contact Form" netlify></form>
       <div class="parallax4"><div>Thank You for Visting!</div></div>
     </main>
 
