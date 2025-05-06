@@ -11,6 +11,11 @@
       integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
       crossorigin="anonymous" />
     <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="icon"
+      class="planelogo"
+      type="image/png"
+      href="img/airplane 100px.png" />
   </head>
   <body>
     <header>
@@ -18,7 +23,7 @@
         <div class="container-fluid">
           <div class="col-1 d-lg-none"></div>
           <!-- <div class=""> -->
-          <a class="navbar-brand text-white" href="index.html" id="nav-h1"
+          <a class="navbar-brand text-white galada-regular" href="index.html"
             >Places to Visit</a
           >
           <!-- <br /> -->
@@ -119,6 +124,70 @@
           </div>
         </div>
       </div>
+      <div class="accordion">
+        <div class="accordion-item">
+          <div class="accordion-header">Hotels</div>
+          <div class="accordion-content">
+            <img src="img/room.jpg" alt="Nature" />
+            <p>
+              Dont ruin your trip with a bad bed. Book your stay ahead of time
+              to have the best expierence!
+            </p>
+            <a href="https://www.hotels.com/"><button>Book Now</button></a>
+            <a href="https://www.airbnb.com/"><button>AIR BNB</button></a>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <div class="accordion-header">Car Rental</div>
+          <div class="accordion-content">
+            <img src="img/subway.jpg" alt="Technology" />
+            <p>
+              See what type of transportation is needed for you trip, or the
+              best options to move like the locals.
+            </p>
+            <a href="https://www.hertz.com/rentacar/reservation/"
+              ><button>Book It With HERTZ</button></a
+            >
+            <a href="https://www.waze.com/apps/"><button>WAZE</button></a>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <div class="accordion-header">Dining</div>
+          <div class="accordion-content">
+            <img src="img/platting.jpg" alt="Travel" />
+            <p>
+              Plan your next adventure with our expert dining guides and tips.
+            </p>
+            <a href="https://www.opentable.com/"
+              ><button>Start Dining with Open Table</button></a
+            >
+          </div>
+        </div>
+      </div>
+
+      <script>
+        const headers = document.querySelectorAll(".accordion-header");
+
+        headers.forEach((header) => {
+          header.addEventListener("click", () => {
+            const content = header.nextElementSibling;
+            const isActive = content.style.display === "block";
+
+            // Close all tabs
+            document
+              .querySelectorAll(".accordion-content")
+              .forEach((c) => (c.style.display = "none"));
+
+            // Open the clicked one if not already open
+            if (!isActive) {
+              content.style.display = "block";
+            }
+          });
+        });
+      </script>
+
       <div class="parallax2">
         <div>Take the leap of a lifetime.</div>
       </div>

@@ -11,6 +11,11 @@
       integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
       crossorigin="anonymous" />
     <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="icon"
+      class="planelogo"
+      type="image/png"
+      href="img/airplane 100px.png" />
   </head>
   <body>
     <header>
@@ -18,7 +23,10 @@
         <div class="container-fluid">
           <div class="col-1 d-lg-none"></div>
           <!-- <div class=""> -->
-          <a class="navbar-brand text-white" href="index.html" id="nav-h1"
+          <a
+            class="navbar-brand text-white galada-regular"
+            href="index.html"
+            id="nav-h1"
             >Contact Form</a
           >
           <!-- <br /> -->
@@ -60,39 +68,6 @@
     <main>
       <div class="parallax3"><div>Have a Question?</div></div>
       <form
-        name="contact"
-        method="POST"
-        data-netlify="true"
-        netlify-honeypot="bot-field">
-        <input type="hidden" name="form-name" value="contact" />
-
-        <!-- Hidden bot field -->
-        <p hidden>
-          <label>Don’t fill this out: <input name="bot-field" /></label>
-        </p>
-
-        <p>
-          <label>Name: <input type="text" name="name" required /></label>
-        </p>
-
-        <p>
-          <label>Email: <input type="email" name="email" required /></label>
-        </p>
-
-        <p>
-          <label>Subject: <input type="text" name="subject" required /></label>
-        </p>
-
-        <p>
-          <label>Message: <textarea name="message" required></textarea></label>
-        </p>
-
-        <p>
-          <button type="submit">Send</button>
-        </p>
-      </form>
-
-      <!-- <form
         name="Contact Form"
         method="post"
         data-netlify="true"
@@ -102,20 +77,21 @@
             <label for="name">Your Name</label>
             <input
               type="text"
-              class="form-floating"
+              class="form-control"
               id="name"
               name="Name"
-              class="form-control" />
+              class="form-control"
+              required />
           </div>
           <div class="form-group col-md-6 mt-3">
             <label for="inputEmail">Your Email</label>
-            <input type="email" class="form-control" id="inputEmail" />
+            <input type="email" class="form-control" id="inputEmail" required />
           </div>
           <div class="form-group col-md-6 mt-3">
             <label for="inputSubject">Subject line</label>
             <input
               type="text"
-              class="form-floating"
+              class="form-control"
               id="inputSubject"
               class="form-control" />
           </div>
@@ -123,12 +99,22 @@
             <label for="inputMessage">Message</label>
             <input
               type="text"
-              class="form-floating"
+              class="form-control"
               id="inputMessage"
-              class="form-control" />
+              class="form-control"
+              required />
+          </div>
+
+          <div>
+            <button
+              type="submit"
+              class="col-md-6 my-3"
+              className="w-full bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg hover:bg-blue-700 transition">
+              Send Message
+            </button>
           </div>
         </div>
-      </form> -->
+      </form>
       <form name="Contact Form" netlify></form>
       <div class="parallax4"><div>Thank You for Visting!</div></div>
     </main>
